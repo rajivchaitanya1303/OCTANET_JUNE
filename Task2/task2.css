@@ -6,15 +6,18 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #333;
 }
 
 .container {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,32 +31,47 @@ header {
 }
 
 header h1 {
-    color: #333;
+    color: #444;
 }
 
 .task-entry {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 .task-entry input,
-.task-entry select,
-.task-entry button {
+.task-entry select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    flex: 1;
+}
+
+.task-entry input[type="date"] {
+    /* Adjust width to make date input wider */
+    width: 200px; /* Increase width as per your requirement */
 }
 
 .task-entry button {
     background-color: #28a745;
-    color: white;
     border: none;
+    padding: 10px;
+    border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .task-entry button:hover {
     background-color: #218838;
+}
+
+.task-entry button img {
+    width: 20px;
+    height: 20px;
 }
 
 .task-list ul {
@@ -61,7 +79,7 @@ header h1 {
 }
 
 .task-list li {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
@@ -69,19 +87,51 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s;
+}
+
+.task-list li:hover {
+    background-color: #f1f1f1;
 }
 
 .task-list .task-text {
     flex: 1;
+    margin-right: 10px;
+}
+
+.task-list .task-actions {
+    display: flex;
+    gap: 10px;
 }
 
 .task-list .task-actions button {
     background-color: #dc3545;
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-list .task-actions button img {
+    width: 15px;
+    height: 15px;
+}
+
+.task-list .task-actions button.complete-btn {
+    background-color: #2fd719;
+    color: #000000;
+}
+
+.task-list .task-actions button.complete-btn img {
+    filter: invert(0);
+}
+
+.task-list .task-actions button.complete-btn:hover {
+    background-color: #18b918;
 }
 
 .task-list .task-actions button:hover {
@@ -89,7 +139,8 @@ header h1 {
 }
 
 .task-list .complete {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    background-color: #d4edda; 
+    border-color: #49da6b;
     text-decoration: line-through;
+    color: #000000;
 }

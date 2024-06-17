@@ -13,8 +13,12 @@ document.getElementById('add-task-btn').addEventListener('click', function() {
                 ${taskInput.value} - ${taskCategory.value} - ${taskPriority.value} - ${taskDate.value}
             </span>
             <div class="task-actions">
-                <button onclick="deleteTask(this)">Delete</button>
-                <button onclick="completeTask(this)">Complete</button>
+                <button onclick="deleteTask(this)">
+                    <img src="icons/delete.svg" alt="Delete Task">
+                </button>
+                <button class="complete-btn" onclick="completeTask(this)">
+                    <img src="icons/check.svg" alt="Complete Task">
+                </button>
             </div>
         `;
 

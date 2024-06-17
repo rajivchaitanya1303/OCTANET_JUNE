@@ -13,7 +13,7 @@
         </header>
         <main>
             <div class="task-entry">
-                <input type="text" id="task-input" placeholder="Add a new task...">
+                <input type="text" id="task-input" placeholder="Add a new task">
                 <input type="date" id="task-date">
                 <select id="task-priority">
                     <option value="low">Low Priority</option>
@@ -25,7 +25,9 @@
                     <option value="personal">Personal</option>
                     <option value="others">Others</option>
                 </select>
-                <button id="add-task-btn">Add Task</button>
+                <button id="add-task-btn">
+                    <img src="icons/add.svg" alt="Add Task">
+                </button>
             </div>
             <div class="task-list">
                 <ul id="task-ul"></ul>
