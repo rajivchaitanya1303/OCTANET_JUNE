@@ -50,8 +50,7 @@ header h1 {
 }
 
 .task-entry input[type="date"] {
-    /* Adjust width to make date input wider */
-    width: 200px; /* Increase width as per your requirement */
+    width: 200px;
 }
 
 .task-entry button {
